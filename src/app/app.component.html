@@ -1,0 +1,7 @@
+<form #f="ngForm" novalidate (ngSubmit)="submit()">
+  <spinner name="counter" [(ngModel)]="basic.counter" required> </spinner>
+
+  <p *ngIf="f.controls.counter.errors">error</p>
+</form>
+
+{{ f.valid }} {{ f.value | json }}
